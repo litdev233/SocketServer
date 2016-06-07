@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64833AD0-F9A4-4522-AF5B-A1BEAA2391B6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SocketServer</RootNamespace>
+    <AssemblyName>SocketServer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Net45\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Net45\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.Common, Version=1.6.6.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Net45\Debug\SuperSocket.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.SocketBase, Version=1.6.6.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Net45\Debug\SuperSocket.SocketBase.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.SocketEngine, Version=1.6.6.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Net45\Debug\SuperSocket.SocketEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cmd\ADD.cs" />
+    <Compile Include="cmd\BaseCommand.cs" />
+    <Compile Include="cmd\ECHO.cs" />
+    <Compile Include="filter\CustomCommandFilter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="server\CustomServer.cs" />
+    <Compile Include="session\CustomSession.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Net45\Debug\log4net.dll" />
+    <Content Include="Net45\Debug\Microsoft.Scripting.dll" />
+    <Content Include="Net45\Debug\Microsoft.Scripting.xml" />
+    <Content Include="Net45\Debug\Newtonsoft.Json.dll" />
+    <Content Include="Net45\Debug\Newtonsoft.Json.xml" />
+    <Content Include="Net45\Debug\SuperSocket.Agent.exe" />
+    <Content Include="Net45\Debug\SuperSocket.Agent.pdb" />
+    <Content Include="Net45\Debug\SuperSocket.Common.dll" />
+    <Content Include="Net45\Debug\SuperSocket.Common.pdb" />
+    <Content Include="Net45\Debug\SuperSocket.Common.XML" />
+    <Content Include="Net45\Debug\SuperSocket.Dlr.dll" />
+    <Content Include="Net45\Debug\SuperSocket.Dlr.pdb" />
+    <Content Include="Net45\Debug\SuperSocket.Dlr.XML" />
+    <Content Include="Net45\Debug\SuperSocket.Facility.dll" />
+    <Content Include="Net45\Debug\SuperSocket.Facility.pdb" />
+    <Content Include="Net45\Debug\SuperSocket.Facility.XML" />
+    <Content Include="Net45\Debug\SuperSocket.ServerManager.dll" />
+    <Content Include="Net45\Debug\SuperSocket.ServerManager.pdb" />
+    <Content Include="Net45\Debug\SuperSocket.SocketBase.dll" />
+    <Content Include="Net45\Debug\SuperSocket.SocketBase.pdb" />
+    <Content Include="Net45\Debug\SuperSocket.SocketBase.XML" />
+    <Content Include="Net45\Debug\SuperSocket.SocketEngine.dll" />
+    <Content Include="Net45\Debug\SuperSocket.SocketEngine.pdb" />
+    <Content Include="Net45\Debug\SuperSocket.SocketEngine.XML" />
+    <Content Include="Net45\Debug\SuperSocket.SocketService.exe" />
+    <Content Include="Net45\Debug\SuperSocket.SocketService.pdb" />
+    <Content Include="Net45\Debug\SuperSocket.WebSocket.dll" />
+    <Content Include="Net45\Debug\SuperSocket.WebSocket.pdb" />
+    <Content Include="Net45\Release\log4net.dll" />
+    <Content Include="Net45\Release\Microsoft.Scripting.dll" />
+    <Content Include="Net45\Release\Microsoft.Scripting.xml" />
+    <Content Include="Net45\Release\Newtonsoft.Json.dll" />
+    <Content Include="Net45\Release\Newtonsoft.Json.xml" />
+    <Content Include="Net45\Release\SuperSocket.Agent.exe" />
+    <Content Include="Net45\Release\SuperSocket.Agent.pdb" />
+    <Content Include="Net45\Release\SuperSocket.Common.dll" />
+    <Content Include="Net45\Release\SuperSocket.Common.pdb" />
+    <Content Include="Net45\Release\SuperSocket.Common.XML" />
+    <Content Include="Net45\Release\SuperSocket.Dlr.dll" />
+    <Content Include="Net45\Release\SuperSocket.Dlr.pdb" />
+    <Content Include="Net45\Release\SuperSocket.Dlr.XML" />
+    <Content Include="Net45\Release\SuperSocket.Facility.dll" />
+    <Content Include="Net45\Release\SuperSocket.Facility.pdb" />
+    <Content Include="Net45\Release\SuperSocket.Facility.XML" />
+    <Content Include="Net45\Release\SuperSocket.ServerManager.dll" />
+    <Content Include="Net45\Release\SuperSocket.ServerManager.pdb" />
+    <Content Include="Net45\Release\SuperSocket.SocketBase.dll" />
+    <Content Include="Net45\Release\SuperSocket.SocketBase.pdb" />
+    <Content Include="Net45\Release\SuperSocket.SocketBase.XML" />
+    <Content Include="Net45\Release\SuperSocket.SocketEngine.dll" />
+    <Content Include="Net45\Release\SuperSocket.SocketEngine.pdb" />
+    <Content Include="Net45\Release\SuperSocket.SocketEngine.XML" />
+    <Content Include="Net45\Release\SuperSocket.SocketService.exe" />
+    <Content Include="Net45\Release\SuperSocket.SocketService.pdb" />
+    <Content Include="Net45\Release\SuperSocket.WebSocket.dll" />
+    <Content Include="Net45\Release\SuperSocket.WebSocket.pdb" />
+    <None Include="App.config" />
+    <None Include="Net45\Debug\Config\log4net.config" />
+    <None Include="Net45\Debug\Config\log4net.unix.config" />
+    <None Include="Net45\Debug\supersocket.cmd" />
+    <None Include="Net45\Debug\supersocket.sh" />
+    <None Include="Net45\Debug\SuperSocket.SocketService.exe.config" />
+    <None Include="Net45\Release\Config\log4net.config" />
+    <None Include="Net45\Release\Config\log4net.unix.config" />
+    <None Include="Net45\Release\supersocket.cmd" />
+    <None Include="Net45\Release\supersocket.sh" />
+    <None Include="Net45\Release\SuperSocket.SocketService.exe.config" />
+    <None Include="SuperSocket%281.6.6%29.Binaries.zip" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
